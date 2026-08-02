@@ -1,4 +1,6 @@
-import 'package:coderaxo_project_1/screens/grand_plaza_hotel_detail_screen.dart';
+
+
+import 'package:coderaxo_project_1/screens/booking_confirmation_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'widgets/hotel_filter_bottom_sheet.dart'; // Adjust path if needed
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const GrandPlazaHotelDetailScreen(),
+      home: const BookingConfirmationScreen(),
     );
   }
 }
