@@ -1,3 +1,4 @@
+import 'package:coderaxo_project_1/screens/payment_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/summary_controller.dart';
@@ -347,7 +348,9 @@ class SummaryScreen extends StatelessWidget {
                           Expanded(
                             flex: 3,
                             child: GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                Get.to(()=> const PaymentScreen());
+                              },
                               child: Container(
                                 height: 40,
                                 decoration: BoxDecoration(

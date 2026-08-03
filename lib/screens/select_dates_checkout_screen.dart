@@ -1,5 +1,8 @@
+import 'package:coderaxo_project_1/screens/select_room_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'booking_confirmation_screen.dart';
 
 class SelectDatesCheckOutScreen extends StatelessWidget {
   const SelectDatesCheckOutScreen({super.key});
@@ -125,7 +128,10 @@ class SelectDatesCheckOutScreen extends StatelessWidget {
                     child: SizedBox(
                       width: MediaQuery.of(context).size.width * 0.8,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          // Navigate to the next screen or perform booking action
+                          Get.off(() => const SelectRoomScreen(),id: null);
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: primaryTeal,
                           elevation: 0,

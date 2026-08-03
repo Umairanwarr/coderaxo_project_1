@@ -1,5 +1,11 @@
+import 'package:coderaxo_project_1/screens/select_dates_checkin_screen.dart';
+import 'package:coderaxo_project_1/screens/select_dates_checkout_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'ar_room_tour_screen.dart';
 
 class GrandPlazaHotelDetailScreen extends StatefulWidget {
   const GrandPlazaHotelDetailScreen({super.key});
@@ -239,60 +245,10 @@ class _GrandPlazaHotelDetailScreenState extends State<GrandPlazaHotelDetailScree
                     Row(
                       children: [
                         Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white, // Solid background blocks the shadow from leaking inside!
-                              borderRadius: BorderRadius.circular(26),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.10),
-                                  blurRadius: 6,
-                                  offset: const Offset(0, 4),
-                                ),
-                              ],
-                            ),
-                            child: Container(
-                              padding: const EdgeInsets.all(16.0),
-                              decoration: BoxDecoration(
-                                color: const Color(0xFF2FC1BE).withOpacity(0.16), // Your semi-transparent tint
-                                borderRadius: BorderRadius.circular(26),
-                                border: Border.all(color: const Color(0xFF2FC1BE)),
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    width: 44,
-                                    height: 44,
-                                    decoration: const BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: Color(0xFF2FC1BE),
-                                    ),
-                                    child: const Center(
-                                      child: Icon(Icons.calendar_today, size: 27, color: Colors.white),
-                                    ),
-                                  ),
-                                  SizedBox(height: 10,),
-                                  Text('Tue, 13 Dec',style: TextStyle(
-                                    fontFamily: GoogleFonts.poppins().fontFamily,
-                                    fontSize: 22,
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.black
-                                  ),),
-                                  SizedBox(height: 3,),
-                                  Text('Check-in',style: TextStyle(
-                                    fontFamily: GoogleFonts.poppins().fontFamily,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.black
-                                  ))
-                                ],
-                              ),
-                            ),
-                          )
-                        ),
-                        SizedBox(width: 4,),
-                        Expanded(
+                          child: GestureDetector(
+                            onTap: (){
+                              Get.to(()=> SelectDatesCheckInScreen(),id: null);
+                            },
                             child: Container(
                               decoration: BoxDecoration(
                                 color: Colors.white, // Solid background blocks the shadow from leaking inside!
@@ -327,20 +283,80 @@ class _GrandPlazaHotelDetailScreenState extends State<GrandPlazaHotelDetailScree
                                       ),
                                     ),
                                     SizedBox(height: 10,),
-                                    Text('Fri, 16 Dec',style: TextStyle(
-                                        fontFamily: GoogleFonts.poppins().fontFamily,
-                                        fontSize: 22,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.black
+                                    Text('Tue, 13 Dec',style: TextStyle(
+                                      fontFamily: GoogleFonts.poppins().fontFamily,
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black
                                     ),),
                                     SizedBox(height: 3,),
-                                    Text('Check-out',style: TextStyle(
-                                        fontFamily: GoogleFonts.poppins().fontFamily,
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.black
+                                    Text('Check-in',style: TextStyle(
+                                      fontFamily: GoogleFonts.poppins().fontFamily,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.black
                                     ))
                                   ],
+                                ),
+                              ),
+                            ),
+                          )
+                        ),
+                        SizedBox(width: 4,),
+                        Expanded(
+                            child: GestureDetector(
+                              onTap: (){
+                                Get.to(()=> SelectDatesCheckOutScreen(),id: null);
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.white, // Solid background blocks the shadow from leaking inside!
+                                  borderRadius: BorderRadius.circular(26),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withOpacity(0.10),
+                                      blurRadius: 6,
+                                      offset: const Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Container(
+                                  padding: const EdgeInsets.all(16.0),
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFF2FC1BE).withOpacity(0.16), // Your semi-transparent tint
+                                    borderRadius: BorderRadius.circular(26),
+                                    border: Border.all(color: const Color(0xFF2FC1BE)),
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width: 44,
+                                        height: 44,
+                                        decoration: const BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Color(0xFF2FC1BE),
+                                        ),
+                                        child: const Center(
+                                          child: Icon(Icons.calendar_today, size: 27, color: Colors.white),
+                                        ),
+                                      ),
+                                      SizedBox(height: 10,),
+                                      Text('Fri, 16 Dec',style: TextStyle(
+                                          fontFamily: GoogleFonts.poppins().fontFamily,
+                                          fontSize: 22,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.black
+                                      ),),
+                                      SizedBox(height: 3,),
+                                      Text('Check-out',style: TextStyle(
+                                          fontFamily: GoogleFonts.poppins().fontFamily,
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.black
+                                      ))
+                                    ],
+                                  ),
                                 ),
                               ),
                             )
@@ -404,7 +420,9 @@ class _GrandPlazaHotelDetailScreenState extends State<GrandPlazaHotelDetailScree
                               ),),
                             ),
                             SizedBox(height: 10,),
-                            TextButton(onPressed: (){}, style: TextButton.styleFrom(
+                            TextButton(onPressed: (){
+                              Get.to(()=> ArRoomTourScreen(),id: null);
+                            }, style: TextButton.styleFrom(
                               fixedSize: Size(284, 35),
                               backgroundColor: Color(0xFF2FC1BE)
                             ),child: Center(

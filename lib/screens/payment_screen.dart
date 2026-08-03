@@ -1,3 +1,4 @@
+import 'package:coderaxo_project_1/screens/booking_confirmation_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -124,7 +125,10 @@ class PaymentScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                 color: bgColor,
                 child: GestureDetector(
-                  onTap: controller.pay,
+                  onTap: (){
+                    Get.off(()=> const BookingConfirmationScreen());
+                    controller.pay();
+                    },
                   child: Container(
                     height: 54,
                     decoration: BoxDecoration(

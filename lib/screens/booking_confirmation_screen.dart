@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'my_bookings_screen.dart';
+
 class BookingConfirmationScreen extends StatelessWidget {
   const BookingConfirmationScreen({super.key});
 
@@ -398,7 +400,9 @@ class BookingConfirmationScreen extends StatelessWidget {
 
               // View My Bookings Button
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Get.to(()=> const MyBookingsScreen());
+                },
                 child: Container(
                   width: double.infinity,
                   height: 54,
@@ -434,7 +438,9 @@ class BookingConfirmationScreen extends StatelessWidget {
 
               // Back To Home Button
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Get.until((route) => route.isFirst);
+                },
                 child: Container(
                   width: double.infinity,
                   height: 54,

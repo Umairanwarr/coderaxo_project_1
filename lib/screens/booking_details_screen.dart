@@ -376,7 +376,9 @@ class BookingDetailsScreen extends StatelessWidget {
 
               // Cancel Booking Button
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Get.back();
+                },
                 child: Container(
                   width: double.infinity,
                   height: 54,
