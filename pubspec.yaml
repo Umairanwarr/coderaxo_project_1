@@ -68,6 +68,11 @@ flutter:
     - assets/images/hotelroompic1.png
     - assets/images/hotel_thumb.png
     - assets/images/qr_for_mybookings.png
+    - assets/images/luxurysuite.png
+    - assets/images/citycenter.png
+    - assets/images/boutique.png
+    - assets/images/explore_map.png
+    - assets/images/directions_map.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

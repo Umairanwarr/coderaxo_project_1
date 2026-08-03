@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/my_bookings_controller.dart';
+import 'booking_details_screen.dart';
 
 class MyBookingsScreen extends StatelessWidget {
   const MyBookingsScreen({super.key});
@@ -354,7 +355,9 @@ class MyBookingsScreen extends StatelessWidget {
 
                     // Booking Details button
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Get.to(BookingDetailsScreen());
+                      },
                       child: Container(
                         padding: const EdgeInsets.symmetric(
                           horizontal: 12,
